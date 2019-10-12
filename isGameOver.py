@@ -19,38 +19,38 @@ def isGameOver(board):
     pos = 0;
     while(pos<=6):
         if(board[pos]=='X' and board[pos+1]=='X' and board[pos+2]=='X'):
-            return 'X'
+            return 1
         if(board[pos]=='O' and board[pos+1]=='O' and board[pos+2]=='O'):
-            return 'O'
+            return 0
         pos+=3
     # col match for X or O
     pos=0
     while(pos<=2):
         if(board[pos]=='X' and board[pos+3]=='X' and board[pos+6]=='X'):
-            return 'X'
+            return 1
         if(board[pos]=='O' and board[pos+3]=='O' and board[pos+6]=='O'):
-            return 'O'
+            return 0
         pos+=1
     #first diagnonal match for O or X
     pos=0
     if(board[pos]=='X' and board[pos+4]=='X' and board[pos+8]=='X'):
-            return 'X'
+            return 1
     if(board[pos]=='O' and board[pos+4]=='O' and board[pos+8]=='O'):
-            return 'O'
+            return 0
     # second diagonal match for X or O
     pos = 6
     if(board[pos]=='X' and board[pos-2]=='X' and board[pos-4]=='X'):
-            return 'X'
+            return 1
     if(board[pos]=='O' and board[pos-2]=='O' and board[pos-4]=='O'):
-            return 'O'
+            return 0
     #now to check whether if it is a draw or conitune state
     pos=0
     while(pos<=8):
         if board[pos]==" ":
-            return -1
+            return -2
         pos=pos+1
     # now all are occupied hence a DRAW
-    return 0
+    return -1
 
 
 def main():

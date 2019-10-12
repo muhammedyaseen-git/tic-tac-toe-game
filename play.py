@@ -54,6 +54,7 @@ def play():
 				pl = isGameOver(arr)		# Get game status
 				
 				if pl != -2:				# If the game is over, do as follows
+					display(arr, row * 3 + col)
 					print(res[pl])			# print the results
 					break					# End the game
 
