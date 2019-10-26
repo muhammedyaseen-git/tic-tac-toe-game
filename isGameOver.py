@@ -52,7 +52,7 @@ def isGameOver(board):
     # now all are occupied hence a DRAW
     return -1
 
-
+'''
 def main():
     arr = ['X','X','O','O','0','O',' ','O','X']
     returnValue = isGameOver(arr)
@@ -60,3 +60,4 @@ def main():
     return
 
 main()
+'''
