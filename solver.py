@@ -8,7 +8,7 @@
 import socket
 
 dp = [{}, {}]
-port = 123
+port = 1234
 server = '127.0.0.1'
 
 def isGameOver(board):
@@ -69,6 +69,10 @@ def solve(board, turn):
     return dp[turn][board][0]
 
 def decision(arr, turn):
+
+    if arr in dp[turn]:
+        return dp[turn][arr][1]
+    
     ch = 'O'
     tup = ()
     if turn:

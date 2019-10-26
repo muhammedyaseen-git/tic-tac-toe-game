@@ -4,7 +4,7 @@ from visualize import display
 from update import update
 import socket
 
-port = 123
+port = 1234
 
 def play():
 	
